@@ -1,0 +1,31 @@
+#main packages
+fastapi
+uvicorn
+
+# for type checking
+pydantic
+pydantic[email]
+
+# for hashing
+passlib
+bcrypt
+
+# for templating
+jinja2
+
+# for static files
+aiofiles
+
+# for database
+sqlalchemy
+psycopg2-binary
+alembic
+
+# for loading enviroment and variables
+python-dotenv
+decouple
+
+#for JWT
+python-jose
+python-jose[cryptography]
+python-multipart
