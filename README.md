@@ -26,3 +26,9 @@ for starting the App:
 ```bash
 $ uvicorn main:app --reload
 ```
+
+* go to [Localhost/8000](https://127.0.0.1/8000) to see the main route
+
+* the **Swagger UI** is available in [/docs](https://127.0.0.1/8000/docs)
+
+* and **reduc** is available in [/redoc](https://127.0.0.1/8000/redoc)
