@@ -3,7 +3,6 @@ from typing import Union
 from jose import JWTError, jwt
 from app.schemas import token as tokendata
 
-
 # import os
 # from dotenv import load_dotenv
 # from pathlib import Path
@@ -36,8 +35,9 @@ def verify_token(token: str, credentials_exception):
         payload = jwt.decode(token, SECRET_KEY,
                              algorithms=[ALGORITHM])
         username: str = payload.get("sub")
+        id: int = payload.get("id")
         if username is None:
             raise credentials_exception
-        token_data = tokendata.TokenData(username=username)
+        token_data = tokendata.TokenData(username=username, id=id)
     except JWTError:
         raise credentials_exception

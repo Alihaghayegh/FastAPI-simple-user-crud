@@ -3,7 +3,7 @@ import sys
 
 
 sys.path.append("..")
-from app.api.v1 import users, login
+from app.api.v1 import users, login, post
 from app.core.database import Base, engine
 
 
@@ -19,3 +19,4 @@ def greet():
 
 app.include_router(login.router)
 app.include_router(users.router)
+app.include_router(post.router)
